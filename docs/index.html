@@ -3,41 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Cupid Profile Visualizations</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
-        h1 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { text-decoration: none; color: #007bff; font-size: 18px; }
-        a:hover { color: #ff4500; }
-    </style>
+    <title>Cupid Profiles - Interactive Visualizations</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Interactive Cupid Profile Visualizations</h1>
-    <p>Click on any visualization below to explore:</p>
-    <ul>
-        <li><a href="age.html">Age</a></li>
-        <li><a href="body_type.html">Body Type</a></li>
-        <li><a href="diet.html">Diet</a></li>
-        <li><a href="drinks.html">Drinks</a></li>
-        <li><a href="drugs.html">Drugs</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="ethnicity.html">Ethnicity</a></li>
-        <li><a href="height.html">Height</a></li>
-        <li><a href="income_distribution1.html">Income Distribution1</a></li>
-        <li><a href="job.html">Job</a></li>
-        <li><a href="location.html">Location</a></li>
-        <li><a href="offspring.html">Offspring</a></li>
-        <li><a href="orientation.html">Orientation</a></li>
-        <li><a href="pca_3d_clusters_kprototypes.html">Pca 3D Clusters Kprototypes</a></li>
-        <li><a href="pets.html">Pets</a></li>
-        <li><a href="religion.html">Religion</a></li>
-        <li><a href="sex.html">Sex</a></li>
-        <li><a href="sign.html">Sign</a></li>
-        <li><a href="smokes.html">Smokes</a></li>
-        <li><a href="speaks.html">Speaks</a></li>
-        <li><a href="status.html">Status</a></li>
-    </ul>
+
+    <div class="container">
+        <h1>💘 Cupid Profiles - Interactive Visualizations 💡</h1>
+        <p>Select a visualization from the dropdown below to explore the data.</p>
+
+        <!-- Dropdown to Select Visualization -->
+        <label for="graph-selector">Choose a Graph:</label>
+        <select id="graph-selector" onchange="updateGraph()">
+            <option value="" selected disabled>Select a Graph</option>
+            <option value="age_cluster_distribution.html">Age Distribution</option>
+            <option value="income_cluster_distribution.html">Income Distribution</option>
+            <option value="drinks_cluster_distribution.html">Drinking Habits</option>
+            <option value="smokes_cluster_distribution.html">Smoking Habits</option>
+            <option value="pets_cluster_distribution.html">Pet Preferences</option>
+            <option value="wordcloud_cluster_0.html">Word Cloud (Cluster 0)</option>
+            <option value="wordcloud_cluster_1.html">Word Cloud (Cluster 1)</option>
+            <option value="wordcloud_cluster_2.html">Word Cloud (Cluster 2)</option>
+            <option value="wordcloud_cluster_3.html">Word Cloud (Cluster 3)</option>
+            <option value="recommendation_flowchart.html">Recommendation Flowchart</option>
+        </select>
+
+        <!-- Graph Display -->
+        <iframe id="graph-frame" width="100%" height="600px" style="border:none; margin-top:20px;"></iframe>
+
+        <p>Explore how data science powers matchmaking! 🔥</p>
+    </div>
+
+    <script>
+        function updateGraph() {
+            var selectedGraph = document.getElementById("graph-selector").value;
+            document.getElementById("graph-frame").src = selectedGraph;
+        }
+    </script>
+
 </body>
 </html>
