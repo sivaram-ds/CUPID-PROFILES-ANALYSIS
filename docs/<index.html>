@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cupid Profile Visualizations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .link-box {
+            margin: 10px;
+            padding: 10px;
+            background: #d63384;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+        }
+        .link-box:hover {
+            background: #a61d69;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Interactive Cupid Profile Visualizations</h1>
+        <p>Click on any visualization below to explore insights!</p>
+
+        <a class="link-box" href="cluster_distribution.html" target="_blank">📊 Cluster Distribution</a><br>
+        <a class="link-box" href="feature_insights.html" target="_blank">📈 Feature Insights</a><br>
+        <a class="link-box" href="wordclouds.html" target="_blank">☁️ NLP Word Clusters</a><br>
+        <a class="link-box" href="similarity_heatmap.html" target="_blank">🔥 Match Similarity Heatmap</a><br>
+        <a class="link-box" href="recommendation_network.html" target="_blank">🔗 Matchmaking Network Graph</a><br>
+        <a class="link-box" href="workflow.html" target="_blank">🛠 Project Workflow</a><br>
+    </div>
+</body>
+</html>
+
